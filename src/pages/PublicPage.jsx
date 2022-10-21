@@ -5,7 +5,7 @@ export const PublicPage = () =>{
   return (
     <>
     <Navbar/>
-    <div>HomePage</div>
+    <div className='publicPage'>This is a public page</div>
     </>
   )
 }

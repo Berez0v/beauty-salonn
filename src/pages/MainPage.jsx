@@ -1,6 +1,7 @@
-import React from 'react'
+import { React,useEffect,useState } from 'react'
 import { Navbar } from '../components/navbar/Navbar'
 import { List } from '../components/list/List';
+import axios from 'axios'
 export const MainPage = ({ isAuthenticated }) => {
   const services = [
     { title: "HAIR WOMAN", url: "/img/hairmaster.png", id: 1 },
@@ -41,7 +42,20 @@ export const MainPage = ({ isAuthenticated }) => {
     { title: "PRODUCT", url: "/img/nailMaster.png", id: 10 },
     { title: "PRODUCT", url: "/img/barbiShop.png", id: 11 }
   ]
+  // const [products,setProducts] = useState([]);
 
+  // useEffect(() => {
+  //   async function getProducts() {
+  //     try {
+  //       const data = await axios.get('../data/products.json');
+  //       setProducts(data.data);
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   };
+  //   getProducts();
+  // }, []);
+  console.log(products);
   return (
     <>
 
@@ -50,7 +64,7 @@ export const MainPage = ({ isAuthenticated }) => {
         <List title={"Services"} items = {services} ></List>
         <List title={"Products"} items={products}></List>
         <List title={"Masters"} items={masters}></List>
-      </div> : <div>PleaseLogin</div>}
+      </div> : <div className='notLoginned'>Please Log In app!</div>}
     </>
   )
 }

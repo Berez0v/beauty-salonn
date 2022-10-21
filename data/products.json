@@ -1,0 +1,57 @@
+[
+	{
+		"title": "HAIR DYE",
+		"url": "/img/hairmaster.png",
+		"id": 1
+	},
+	{
+		"title": "HAND CREAM",
+		"url": "/img/nailMaster.png",
+		"id": 2
+	},
+	{
+		"title": "FACE CREAM",
+		"url": "/img/barbiShop.png",
+		"id": 3
+	},
+	{
+		"title": "PRODUCT",
+		"url": "/img/nailMaster.png",
+		"id": 4
+	},
+	{
+		"title": "PRODUCT",
+		"url": "/img/nailMaster.png",
+		"id": 5
+	},
+	{
+		"title": "PRODUCT",
+		"url": "/img/nailMaster.png",
+		"id": 6
+	},
+	{
+		"title": "PRODUCT",
+		"url": "/img/nailMaster.png",
+		"id": 7
+	},
+	{
+		"title": "PRODUCT",
+		"url": "/img/barbiShop.png",
+		"id": 8
+	},
+	{
+		"title": "PRODUCT",
+		"url": "/img/barbiShop.png",
+		"id": 9
+	},
+	{
+		"title": "PRODUCT",
+		"url": "/img/nailMaster.png",
+		"id": 10
+	},
+	{
+		"title": "PRODUCT",
+		"url": "/img/barbiShop.png",
+		"id": 11
+	}
+]

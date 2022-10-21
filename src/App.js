@@ -27,8 +27,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<PublicPage />} />
-          <Route path="/LoginPage" element={<LoginPage setAuth={setAuth} />} />
-          <Route path="/OrderServicePage" element={<OrderServicePage isAuthenticated={isAuthenticated} />} />
+            <Route path="/LoginPage" element={<LoginPage setAuth={setAuth} isAuthenticated={isAuthenticated}/>} />
+            <Route path="/OrderServicePage" element={<OrderServicePage isAuthenticated={isAuthenticated} />} />
           <Route path="/MainPage" element={<MainPage isAuthenticated={isAuthenticated} />} />
         </Routes>
       </Router>

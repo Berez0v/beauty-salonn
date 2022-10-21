@@ -1,0 +1,43 @@
+.listBody {
+    // background-color: aqua;
+    width: 1411px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    .title {
+        position: relative;
+
+        h4 {
+            margin-bottom: 48px;
+            font-size: 30px;
+            line-height: 30px;
+        }
+
+        img {
+            position: absolute;
+            right: 15px;
+            top: 0;
+        }
+    }
+
+    .list {
+
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+
+        div {
+            margin-left: 22px; 
+           align-items: center;
+            img {
+                width: 120px;
+                height: 120px;
+            }
+            p{
+            width: 120px;
+            text-align: center;
+            text-decoration: underline;
+            margin-bottom: 50px;
+            }
+        }
+    }
+}
