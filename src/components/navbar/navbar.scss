@@ -1,0 +1,28 @@
+nav{
+    height: 90px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    a{
+        box-sizing: border-box;
+        padding: 1em;
+        display: flex;
+      background: lightgray;
+      border: 1px solid gray;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.3em;
+      .logo {
+          width: 79px;
+          height: 54px;
+      }
+      h2 {
+        font-size: 34px;
+      
+    }
+      h3 {
+        
+        font-size: 14px;
+      }
+    }
+}
+  

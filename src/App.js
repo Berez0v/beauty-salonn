@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { MainPage } from "./pages/MainPage";
+import LoginPage from "./pages/LoginPage";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import { useEffect, useState } from "react";
+import { PublicPage } from "./pages/PublicPage";
+import { OrderServicePage } from "./pages/OrderServicePage";
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(
+    JSON.parse(localStorage.getItem('auth')) || false
+  );
+
+  const setAuth = (value) => {
+    setIsAuthenticated(value);
+  };
+
+  useEffect(() => {
+    localStorage.setItem("auth", JSON.stringify(isAuthenticated));
+  }, [isAuthenticated]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<PublicPage />} />
+          <Route path="/LoginPage" element={<LoginPage setAuth={setAuth} />} />
+          <Route path="/OrderServicePage" element={<OrderServicePage isAuthenticated={isAuthenticated} />} />
+          <Route path="/MainPage" element={<MainPage isAuthenticated={isAuthenticated} />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
