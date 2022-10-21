@@ -4,10 +4,17 @@ import './navbar.scss'
 export const Navbar = () => {
     return (
         <nav className='menu'>
-            <Link to="/"><img className='logo' src="src/assets/clown.png" alt='clown' /><h2>PowerBeauty</h2><h3>Beauty is our duty</h3></Link>
+            <Link to="/">
+                <img src="/img/logo.png" className="logo" alt='clown' />
+                <img src="/img/clown.png" alt='clown' />
+            </Link>
+                <div></div>
+                <div></div>
+            <div className='menu'>
             <Link to="/MainPage">Main page</Link>
-            <Link to="/OrderServicePage">Order service page</Link>
-            <Link to="/LoginPage">Login</Link>
+            <Link to="/OrderServicePage">Order service</Link>
+            <Link className="login" to="/LoginPage">Login</Link>
+            </div>
         </nav>
     )
 }

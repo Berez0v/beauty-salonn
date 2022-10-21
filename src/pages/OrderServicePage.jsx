@@ -7,7 +7,7 @@ export const OrderServicePage = ({ isAuthenticated }) => {
       <>
        
         <Navbar />
-        { isAuthenticated ?  <div>MainPage</div> : <div>PleaseLogin</div>  }
+        { isAuthenticated ?  <div>MainPedage</div> : <div className='isAuth'>PleaseLogin</div>  }
       </>
     )
 }
