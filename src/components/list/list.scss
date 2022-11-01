@@ -13,15 +13,15 @@
             line-height: 30px;
         }
 
-        img {
+        button {
             position: absolute;
             right: 15px;
             top: 0;
+            border: none;
         }
     }
 
     .list {
-
         display: grid;
         grid-template-columns: repeat(7, 1fr);
 

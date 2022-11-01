@@ -69,3 +69,28 @@ margin: 0 auto;
 text-align: center;
 font-size: 50px;
 }
+
+.orderTitle {
+  position: absolute;
+  display: flex;
+  top:130px;
+  left: 80px;
+  align-items: center;
+  font-size: 48px;
+  :first-child {
+    color: #5255C8;
+  }
+  :last-child{
+    padding: 8px;
+    height: 42px;
+    background-color: #EEFD77;
+    border-radius: 12px;
+    font-size: 0.5em;
+    text-align: center;
+    box-sizing: border-box;
+    margin-left: 20px;
+  }
+}
+.wrapper {
+  background-color: brown;
+}

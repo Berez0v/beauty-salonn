@@ -1,20 +1,19 @@
-import { React,useEffect,useState } from 'react'
+import { React } from 'react'
 import { Navbar } from '../components/navbar/Navbar'
 import { List } from '../components/list/List';
-import axios from 'axios'
 export const MainPage = ({ isAuthenticated }) => {
   const services = [
     { title: "HAIR WOMAN", url: "/img/hairmaster.png", id: 1 },
-    { title: "NAILS",      url: "/img/nailMaster.png", id: 2 },
-    { title: "BARBER",     url: "/img/barbiShop.png", id: 3 },
-    { title: "NAILS",      url: "/img/nailMaster.png", id: 4 },
-    { title: "BARBER",     url: "/img/barbiShop.png", id: 5 },
-    { title: "NAILS",      url: "/img/nailMaster.png", id: 6 },
-    { title: "NAILS",      url: "/img/nailMaster.png", id: 7 },
-    { title: "BARBER",     url: "/img/barbiShop.png", id: 8 },
-    { title: "BARBER",     url: "/img/barbiShop.png", id: 9 },
-    { title: "NAILS",      url: "/img/nailMaster.png", id: 10 },
-    { title: "BARBER",     url: "/img/barbiShop.png", id: 11 }
+    { title: "NAILS", url: "/img/nailMaster.png", id: 2 },
+    { title: "BARBER", url: "/img/barbiShop.png", id: 3 },
+    { title: "NAILS", url: "/img/nailMaster.png", id: 4 },
+    { title: "BARBER", url: "/img/barbiShop.png", id: 5 },
+    { title: "NAILS", url: "/img/nailMaster.png", id: 6 },
+    { title: "NAILS", url: "/img/nailMaster.png", id: 7 },
+    { title: "BARBER", url: "/img/barbiShop.png", id: 8 },
+    { title: "BARBER", url: "/img/barbiShop.png", id: 9 },
+    { title: "NAILS", url: "/img/nailMaster.png", id: 10 },
+    { title: "BARBER", url: "/img/barbiShop.png", id: 11 }
   ];
   const masters = [
     { title: "ANA MARIA", url: "/img/hairmaster.png", id: 1 },
@@ -29,6 +28,7 @@ export const MainPage = ({ isAuthenticated }) => {
     { title: "MASTER", url: "/img/nailMaster.png", id: 10 },
     { title: "MASTER", url: "/img/barbiShop.png", id: 11 }
   ]
+
   const products = [
     { title: "HAIR DYE", url: "/img/hairmaster.png", id: 1 },
     { title: "HAND CREAM", url: "/img/nailMaster.png", id: 2 },
@@ -61,7 +61,7 @@ export const MainPage = ({ isAuthenticated }) => {
 
       <Navbar />
       {isAuthenticated ? <div>
-        <List title={"Services"} items = {services} ></List>
+        <List title={"Services"} items={services} ></List>
         <List title={"Products"} items={products}></List>
         <List title={"Masters"} items={masters}></List>
       </div> : <div className='notLoginned'>Please Log In app!</div>}
