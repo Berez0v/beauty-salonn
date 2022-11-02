@@ -1,25 +1,27 @@
-import {React} from 'react'
+import { React } from 'react'
 import { Navbar } from '../components/navbar/Navbar'
 import { First } from '../components/steps/First';
+import { Second } from '../components/steps/Second'
+import { Routes, Route, useParams } from 'react-router-dom';
+
 export const OrderServicePage = ({ isAuthenticated }) => {
   // const [step,setStep] = useState(1);
-    return (
-      <>
-       
-        <Navbar />
-        { isAuthenticated ?  <div>
-          <div className='orderTitle'><p>Register new order</p><p>Step 1/3 - firsdfdsfdsst</p></div>
-          
-          
-          {
-          <First />
-          
-          }
+  const { stepId } = useParams();
+  const steps = [<First />, <Second />];
+  const page = steps.find((step, index) => index + 1 === Number(stepId));
 
+  return (
+    <>
 
+      <Navbar />
+      {isAuthenticated ? <div>
+        {
+          <>
+            <div>This is Form page</div>
+          </>
+        }
 
-
-        </div> : <div className='notLoginned'>Please Log In app!</div>  }
-      </>
-    )
+      </div> : <div className='notLoginned'>Please Log In app!</div>}
+    </>
+  )
 }

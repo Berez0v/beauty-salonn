@@ -27,7 +27,7 @@ const LoginPage = ({ setAuth, isAuthenticated }) => {
     }
     return (
         <>
-            <Navbar></Navbar>
+            <Navbar/>
             {isAuthenticated ? <div className='alreadyAuth'>
                 You are already authenticated in the app!</div> :
                 <div className="formBody">

@@ -2,7 +2,7 @@ import React from "react";
 import EmailInput from "./inputs/EmailInput";
 import InputText from "./inputs/InputText";
 import NumberInput from "./inputs/NumberInput";
-import PasswordInput from "./inputs/PasswordInput";
+// import PasswordInput from "./inputs/PasswordInput";
 import SelectInput from "./inputs/SelectInput";
 import TextareaInput from "./inputs/Textarea";
 import DateInput from "./inputs/DateInput";
@@ -16,9 +16,9 @@ const FormInputs = ({ element, register, control }) => {
     case "time":
       InputElement = Time;
       break;
-    case "password":
-      InputElement = PasswordInput;
-      break;
+    // case "password":
+    //   InputElement = PasswordInput;
+    //   break;
     case "email":
       InputElement = EmailInput;
       break;

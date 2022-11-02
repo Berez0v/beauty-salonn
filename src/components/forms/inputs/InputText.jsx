@@ -8,6 +8,7 @@ const StyledTextField = styled(TextField)(() => ({
     background: "#FAFAFA",
     borderRadius: "20px",
     outline: "none",
+    width: "660px"
   },
   ".MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
     border: "none",

@@ -6,6 +6,7 @@ import ClearIcon from "@mui/icons-material/Clear";
 const StyledAutcomplete = styled(Autocomplete)(() => ({
   ".MuiAutocomplete-inputRoot": {
     width: "100%",
+    marginTop : "50px",
     height: "100%",
     background: "#FAFAFA",
     borderRadius: "20px",
@@ -15,6 +16,7 @@ const StyledAutcomplete = styled(Autocomplete)(() => ({
     border: "none",
   },
   "label.Mui-focused": {
+    marginTop : "20px",
     color: "rgba(0, 0, 0, 0.96)",
   },
   ".MuiAutocomplete-popupIndicator": {

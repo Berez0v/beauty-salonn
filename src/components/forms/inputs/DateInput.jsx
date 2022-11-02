@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from "@emotion/styled";
 import { Controller } from 'react-hook-form';
+import { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -23,20 +24,27 @@ const StyledDatePicker = styled(MuiDatePicker)(() => ({
 }));
 export default function DatePicker({ element, register, control }) {
   const { label, name, placeholder } = element;
-  return (
+  
+    const [reqDate, setreqDate] = useState(new Date());
 
-    <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <Controller
-        control={control}
-        render={({ field: { onChange } }) => (
-          <DatePicker
-            onChange={
-              (event, value) => {
-              console.log(value)
-              onChange(value)
-              }}/>
-        )}
-        />
-    </LocalizationProvider>
+    return ( <Controller
+      name={name}
+      defaultValue={reqDate}
+      control={control}
+      render={
+          ({ field: { onChange, ...restField } }) =>
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <StyledDatePicker
+                  label={label}
+                  onChange={(event) => {  onChange(event); setreqDate(event); }}
+                  renderInput={(params) =>
+                  <TextField
+                      {...params}
+                  />}
+                  {...restField}
+              />
+          </LocalizationProvider>
+         }
+     /> 
   );
 }
