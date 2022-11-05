@@ -22,7 +22,7 @@ const LoginPage = ({ setAuth, isAuthenticated }) => {
         event.preventDefault()
         if (formData.login === "r" && formData.password === "1") {
             setAuth(true)
-            navigate("/MainPage", { replace: true })
+            navigate("/main", { replace: true })
         }
     }
     return (

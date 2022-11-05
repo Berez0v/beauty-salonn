@@ -11,9 +11,9 @@ export const Navbar = () => {
                 <div></div>
                 <div></div>
             <div className='menu'>
-            <Link to="/MainPage">Main page</Link>
-            <Link to="/OrderServicePage">Order service</Link>
-            <Link className="login" to="/LoginPage">Login</Link>
+            <Link to="/main">Main page</Link>
+            <Link to="/orders/step/1">Order service</Link>
+            <Link className="login" to="/login">Login</Link>
             </div>
         </nav>
     )

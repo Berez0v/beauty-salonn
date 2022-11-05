@@ -12,11 +12,11 @@ export const SecondForm = [
       type: "text",
       name: "phone",
       label: "Phone",
-      placeholder: "+373-069-155-223",
+      placeholder:"373 612 34 567",
       register: {
         required: "Phone is required",
         pattern: {
-          value: /^[+]?[(]?[0-9]{3}[)]?[-s.]?[0-9]{3}[-s.]?[0-9]{4,6}$/,
+          value: /^((3737|3736)([0-9]){7})$/,
           message: "Invalid phone number",
         },
       },

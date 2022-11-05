@@ -42,19 +42,6 @@ export const MainPage = ({ isAuthenticated }) => {
     { title: "PRODUCT", url: "/img/nailMaster.png", id: 10 },
     { title: "PRODUCT", url: "/img/barbiShop.png", id: 11 }
   ]
-  // const [products,setProducts] = useState([]);
-
-  // useEffect(() => {
-  //   async function getProducts() {
-  //     try {
-  //       const data = await axios.get('../data/products.json');
-  //       setProducts(data.data);
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   };
-  //   getProducts();
-  // }, []);
   console.log(products);
   return (
     <>

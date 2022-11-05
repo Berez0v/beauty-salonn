@@ -4,8 +4,14 @@ import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownR
 import ClearIcon from "@mui/icons-material/Clear";
 
 const StyledAutcomplete = styled(Autocomplete)(() => ({
-  ".MuiOutlinedInput-root": {
-    width: "100%",
+  ".css-3pb18c-MuiAutocomplete-root ":{
+
+    width: "50px",
+  },
+  ".MuiAutocomplete-inputRoot": {
+    // width: "50%",
+    // marginTop : "50px",
+    // width : ""
     height: "100%",
     background: "#FAFAFA",
     borderRadius: "20px",
@@ -15,15 +21,8 @@ const StyledAutcomplete = styled(Autocomplete)(() => ({
     border: "none",
   },
   "label.Mui-focused": {
+    marginTop : "20px",
     color: "rgba(0, 0, 0, 0.96)",
-  },
-  ".MuiAutocomplete-inputRoot": {
-    width: "100%",
-    
-    height: "100%",
-    background: "#FAFAFA",
-    borderRadius: "20px",
-    outline: "none",
   },
   ".MuiAutocomplete-popupIndicator": {
     position: "absolute",
@@ -40,8 +39,9 @@ const StyledAutcomplete = styled(Autocomplete)(() => ({
   },
 }));
 
-const SelectInput = ({ element, register,control}) => {
+const CurrencyInput = ({ element, register,control}) => {
   const { label, name, options, placeholder } = element;
+//  console.log(options);
   return (
     <>
       <Controller
@@ -55,7 +55,7 @@ const SelectInput = ({ element, register,control}) => {
             {...register(name, { ...element.register })}
             options={options}
             onChange={(_, data) => {
-              return onChange(data?.id);
+              return onChange(data?.value);
             }}
             clearIcon={<ClearIcon fontSize="small" />}
             isOptionEqualToValue={(option, value) =>
@@ -71,4 +71,4 @@ const SelectInput = ({ element, register,control}) => {
   );
 };
 
-export default SelectInput;
+export default CurrencyInput;

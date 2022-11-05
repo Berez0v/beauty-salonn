@@ -1,26 +1,26 @@
-const serviceCategoryOptions = [
+export const serviceCategoryOptions = [
     {
-      value: "ServiceCategory#1",
-      label: "ServiceCategory#1",
+      id: 1,
+      label: "Hair Woman",
     },
     {
-      value: "ServiceCategory#2",
-      label: "ServiceCategory#2",
+      id: 2,
+      label: "Nails",
     },
     {
-      value: "ServiceCategory#3",
-      label: "ServiceCategory#3",
+      id: 3,
+      label: "Barber",
     },
   ];
   
   const serviceOptions = [
     {
-      value: "Service#1",
-      label: "Service#1",
+      value: "Hair dye",
+      label: "Hair dye",
     },
     {
-      value: "Service#2",
-      label: "Service#2",
+      value: "Hand Cream",
+      label: "Hand Cream",
     },
     {
       value: "Service#3",
@@ -69,39 +69,26 @@ const serviceCategoryOptions = [
         required: "This field is required",
       },
     },
-    {
-      type: "select",
-      name: "service",
-      label: "Service",
-      options: [
-        {
-          value: "Service#1",
-          label: "Service#1",
-        },
-        {
-          value: "Service#2",
-          label: "Service#2",
-        },
-        {
-          value: "Service#3",
-          label: "Service#3",
-        },
-      ],
-      placeholder: "Select from list",
-      register: {
-        required: "This field is required",
-      },
-    },
-    {
-      type: "select",
-      name: "masters",
-      label: "Masters",
-      options: mastersOptions,
-      placeholder: "Select from list",
-      register: {
-        required: "Please, choose a master",
-      },
-    },
+    // {
+    //   type: "select",
+    //   name: "service",
+    //   label: "Service",
+    //   options: serviceOptions,
+    //   placeholder: "Select from list",
+    //   register: {
+    //     required: "This field is required",
+    //   },
+    // },
+    // {
+    //   type: "select",
+    //   name: "masters",
+    //   label: "Masters",
+    //   options: mastersOptions,
+    //   placeholder: "Select from list",
+    //   register: {
+    //     required: "Please, choose a master",
+    //   },
+    // },
     {
       type: "date",
       name: "date",
@@ -111,30 +98,30 @@ const serviceCategoryOptions = [
         required: "Date is required"
       },
     },
-    // {
-    //   type: "time",
-    //   name: "timeFrom",
-    //   label: "Time From",
-    //   placeholder: "15:45",
-    //   // register: {
-    //   //   // required: "Please, choose a time",
-    //   //   pattern: {
-    //   //     value: /^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/,
-    //   //   },
-    //   // },
-    // },
-    // {
-    //   type: "time",
-    //   name: "timeTo",
-    //   label: "Time To",
-    //   placeholder: "17:00",
-    //   // register: {
-    //   //   // required: "Please, choose a time",
-    //   //   pattern: {
-    //   //     value: /^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/,
-    //   //   },
-    //   // },
-    // },
+    {
+      type: "time",
+      name: "timeFrom",
+      label: "Time From",
+      placeholder: "15:45",
+      // register: {
+      //   // required: "Please, choose a time",
+      //   pattern: {
+      //     value: /^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/,
+      //   },
+      // },
+    },
+    {
+      type: "time",
+      name: "timeTo",
+      label: "Time To",
+      placeholder: "17:00",
+      // register: {
+      //   // required: "Please, choose a time",
+      //   pattern: {
+      //     value: /^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/,
+      //   },
+      // },
+    },
     {
       type: "number",
       name: "price",
@@ -144,14 +131,14 @@ const serviceCategoryOptions = [
         required: "Price is required",
       },
     },
-    {
-      type: "select",
-      name: "currency",
-      label: "Currency",
-      options: currencyOptions,
-      register: {
-        required: "Please, choose currency",
-      },
-    },
+    // {
+    //   type: "select",
+    //   name: "currency",
+    //   label: "Currency",
+    //   options: currencyOptions,
+    //   register: {
+    //     required: "Please, choose currency",
+    //   },
+    // },
   ];
   export default formModel;
